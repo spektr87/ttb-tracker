@@ -33,7 +33,11 @@ img {
 	
 #menu {
 	width: 200px;
-	margin: 10px;
+	margin: 0px;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
 	}
 	
 #menu li a {
@@ -41,7 +45,7 @@ img {
   	height: 24px;
 	text-decoration: none;
 	}	
-	
+
 #menu li a:link, #menu li a:visited {
 	color: #333;
 	display: block;
@@ -51,6 +55,11 @@ img {
 	
 #menu li a:hover {
 	color: #FFF;
-	background:  url(menu.gif) 0 -32px;
+	background:#00387b;
 	padding: 8px 0 0 10px;
 	}
+#menu li a.active {
+		color: #FFF;
+		background:#00387b;
+		padding: 8px 0 0 10px;
+		}
