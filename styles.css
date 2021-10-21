@@ -3,6 +3,7 @@ body {
 	font-size: 80%;
 	font-weight: bold;
 	background: #FFF;
+	background-image: "ressources\THW.svg.png" ;
 	}
 
 h1 {
@@ -37,8 +38,6 @@ img {
 	
 #menu li a {
 	height: 32px;
-  	voice-family: "\"}\""; 
-  	voice-family: inherit;
   	height: 24px;
 	text-decoration: none;
 	}	
