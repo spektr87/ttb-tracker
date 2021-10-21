@@ -3,17 +3,26 @@ body {
 	font-size: 80%;
 	font-weight: bold;
 	background: #FFF;
-	background-image: "ressources\THW.svg.png" ;
+	background-image: url("ressources/THW.svg.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-attachment: fixed;
 	}
 
 h1 {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:16px;
+	font-size:20px;
 	font-weight:bold;
 	margin:0;
 	padding:0;
 	}
-
+h2 {
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		margin:0;
+		padding:0;
+		}
 hr {
 	border:none;
 	border-top:1px solid #CCCCCC;
@@ -32,7 +41,7 @@ img {
 	}
 	
 #menu {
-	width: 200px;
+	width: 15%;
 	margin: 0px;
 	background-color: #f1f1f1;
 	position: fixed;
@@ -63,3 +72,7 @@ img {
 		background:#00387b;
 		padding: 8px 0 0 10px;
 		}
+main {
+	margin-left: 15%;
+	padding: 1px 16px;
+}
