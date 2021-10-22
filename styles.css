@@ -110,7 +110,7 @@ main {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: #008000;
 	-webkit-transition: .4s;
 	transition: .4s;
   }
@@ -165,8 +165,21 @@ main {
 	position:absolute;
 	height: 54px;
 	width: 120px;
-	left: 20%;
+	left: 18.5%;
+	border: none;
 	background-color:#00387b;
 	font-weight: bold;
 	color: #FFF;
+}
+input[type=text] {
+	height: 30px;
+	width: 200px;
+	background-color: #ccc;
+	border: none;
+}
+input[list]{
+	height: 30px;
+	width: 200px;
+	background-color: #ccc;
+	border: none;
 }
