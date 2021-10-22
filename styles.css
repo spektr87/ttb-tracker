@@ -88,3 +88,85 @@ main {
 	margin-left: 15%;
 	padding: 1px 16px;
 }
+.switch {
+	position: absolute;
+	display: inline-block;
+	width: 120px;
+	height: 54px;
+	top:15%;
+	left:50%
+  }
+  
+  .switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	height: 56px;
+	width: 76px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #00387b;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #00387b;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(36px);
+	-ms-transform: translateX(36px);
+	transform: translateX(36px);
+  }
+  .slider:after
+  {
+   content:'Eingang';
+   color: white;
+   display: block;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 50%;
+   font-size: 15px;
+   font-family: Verdana, sans-serif;
+  }
+  
+  input:checked + .slider:after
+  {  
+	content:'Ausgang';
+  }
+#tbbinput {
+	position:absolute;
+	left: 45%;
+	top: 25%;
+}
+#tbbsafe {
+	position:absolute;
+	height: 54px;
+	width: 120px;
+	left: 20%;
+	background-color:#00387b;
+	font-weight: bold;
+	color: #FFF;
+}

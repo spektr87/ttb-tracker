@@ -13,9 +13,26 @@
             </ul>
         </div>
         <div id="headline">TBB Generator</div>
-        <main></main>
-            </label>
-        </form>
+        <main>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <form  id="tbbinput" action="/action_page.php" method:"get">
+            <label style="padding-right: 70px;"> Wir:</label>
+                <input type="text" id="wir" value="EAL THW" required>
+            <br>
+            <label style="padding-right: 1.5px;">Gegenstellen:</label>
+                <input list="gegenstelle" required>
+                <datalist id=gegenstelle>
+                    <option value="Gegenstelle 1">
+                    <option value="Gegenstelle 2">
+                    <option value="Gegenstelle 3">
+                </datalist>
+                <input type="reset">
+                <br><br>
+            <input id="tbbsafe" type="submit" value="Speichern">
+            </form>
         </main>
     </body>
 </html>
