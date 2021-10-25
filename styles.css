@@ -168,8 +168,9 @@ main {
 	left: 18.5%;
 	border: none;
 	background-color:#00387b;
-	font-weight: bold;
 	color: #FFF;
+	font-size: 15px;
+    font-family: Verdana, sans-serif;
 }
 input[type=text] {
 	height: 30px;
