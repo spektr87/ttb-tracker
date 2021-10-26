@@ -1,5 +1,9 @@
+@font-face {
+	font-family:'lubalin graph';
+	src: url(/ressources/LubalinGraphStd-Book.otf) format('opentype');
+}
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family:'lubalin graph';
 	font-size: 80%;
 	font-weight: bold;
 	background: #FFF;
