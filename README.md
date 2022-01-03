@@ -1,1 +1,2 @@
 # ttb-tracker
+Diese Applikation bestimmt per Userinteraktionen Grundparameter, um dann eine eindeutige fortlaufende TBB Nummer zu generieren. Diese Seite läuft auf einem lokalen Server und kann so von mehreren Personen in einer FMZ bedient werden. Die Datenbank wird per PHP angesprochen und ist auf Basis von MySQL

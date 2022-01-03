@@ -8,6 +8,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
-$seinsatzName ="SELECT einsatzName FROM einsaetze";
+$seinsatzName ="SELECT einsatzName, einsatzId FROM einsaetze";
 $reinsatzName = $conn->query($seinsatzName);
 ?>

@@ -1,8 +1,8 @@
+<!DOCTYPE html>
+<html>
 <?php
 include('connect.php')
 ?>
-<!DOCTYPE html>
-<html>
     <head>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -11,7 +11,7 @@ include('connect.php')
             <ul id="menu">
                 <li><a href="home.html">Startseite</a></li>
                 <li><a class="active" href="stellen.php">Stellenbezeichnungen</a></li>
-                <li><a href="tbb.html">TBB betreiben</a></li>
+                <li><a href="tbb.php">TBB betreiben</a></li>
                 <li><a href="suche.html">Suche</a></li>
             </ul>
         </div>
@@ -23,38 +23,55 @@ include('connect.php')
             <form name=einsatz style="padding-left: 400px;"  action="/tbbgenerator/phpScripts/postEinsatz.php" method="post">
                 <table>
                     <tr>
-                    <td>EinsatzName</td>
-                    <td><input type="text" id="einsatzName" name="einsatzName" required></td>
+                        <td colspan="2" align="center">EinsatzName</td></tr>
                     <tr>
+                        <td><input type="text" id="einsatzName" name="einsatzName" required></td>
+                    </tr>
                     <tr>
-                    <td>FMZ Name</td>
-                    <td><input type="text" id="fmzName" name="fmzName" required></td>
-                    </table>
+                        <td colspan="2" align="center">FMZ Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="fmzName" name="fmzName" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Anlegen" id="submitEinsatz"></td>
+                    </tr>
+                </table>
                 <label style="padding-left: 160px;"></label>
-                <input type="submit" value="Anlegen" id="submitEinsatz">
               </form>
               <hr>
-              <h2>Suche nach einem laufenden Einsatz</h2>
-            <p>Läuft der Einsatz schon und du möchtest weitere Stellen hinzufügen, dann suche dir den entsprechenden Einsatz raus.</p>
-            <form style="padding-left: 500px;">    
-            <input type=text name="geteinsaetze" list="einsaetze"/>
-                <datalist id="einsaetze">
-                <?php while($row = mysqli_fetch_array($reinsatzName)) { ?>
-            <option value="<?php echo $row['einsatzName']; ?>"><?php echo $row['einsatzName']; ?></option> <?php } ?>       
-             </datalist>
-            <br><br>
-                <label style="padding-left: 50px;"></label>
-                <input type="reset">
-                </form>
-              <br>
-              <hr>
-              <h2>Erfassen von Gegenstellen</h2>
-              <p>Hier werden alle Gegenstellen aufgenommen.</p>
-              <form style="padding-left: 500px;" action="/action_page.php" method="post">
-                <label for="gegen"></label>
-                <input type="text" id="gegen" name="gegen" required><br><br>
-                <label style="padding-left: 60px;"></label>
-                <input type="submit" value="Anlegen">
+              <h2>Lege Gegenstellen an</h2>
+            <p>Läuft der Einsatz schon und du möchtest weitere Stellen hinzufügen, dann suche dir den entsprechenden Einsatz raus und lege die Gegenstelle an. </p>
+            <form style="padding-left: 400px;" action="/tbbgenerator/phpScripts/postGegenstelle.php" method="post">  
+            <table> 
+                <tr>
+                     <td colspan="2" align="center">Einsatz</td>
+                </tr>
+                <tr>
+                    <td><input type=text name="einsatzId" list="einsaetze"/>
+                        <datalist id="einsaetze">
+                         <?php while($row = mysqli_fetch_array($reinsatzName)) { ?>
+                        <option value="<?php echo $row['einsatzId']; ?>"><?php echo $row['einsatzName']; ?></option> <?php } ?>       
+                        </datalist>
+                    </td>
+                </tr>
+                <tr><td colspan="2" align="center">Name Gegenstelle</td></tr>
+                <tr>    
+                    <td> 
+                        <input type="text" id="gegenstelleName" name="gegenstelleName" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"align="center">
+                        <input type="submit" value="Anlegen">
+                    </td>   
+                </tr>
+                </table>
               </form>
         </main>
     </body>
